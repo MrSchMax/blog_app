@@ -4,3 +4,24 @@
 
 #= require_self
 #= require_tree ./controllers/main
+
+# Creates new Angular module called 'Blog'
+Blog = angular.module('Blog', [
+  'ngRoute'
+])
+
+# Sets up routing
+Blog.config(['$routeProvider',
+  ($routeProvider) ->
+    # Route for '/post'
+    $routeProvider
+      .when('/post/:postId',
+        templateUrl: '../assets/mainPost.html'
+        controller: 'PostCtrl'
+      )
+      #Default
+      .otherwise(
+        templateUrl: '../assets/mainIndex.html'
+        controller: 'IndexCtrl'
+      )
+])
