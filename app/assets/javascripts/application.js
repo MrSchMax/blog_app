@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require bootstrap-sprockets
 //= require angular
 //= require angular-route
+//= require underscore
 //= require_tree .

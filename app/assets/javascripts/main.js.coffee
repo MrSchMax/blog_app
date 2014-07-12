@@ -16,6 +16,10 @@ Blog.config(['$routeProvider',
   ($routeProvider) ->
     # Route for '/post'
     $routeProvider
+      .when('/post/new',
+        templateUrl: '../assets/mainCreatePost.html'
+        controller: 'CreatePostCtrl'
+      )
       .when('/post/:postId',
         templateUrl: '../assets/mainPost.html'
         controller: 'PostCtrl'
@@ -25,4 +29,8 @@ Blog.config(['$routeProvider',
         templateUrl: '../assets/mainIndex.html'
         controller: 'IndexCtrl'
       )
+])
+
+Blog.config(["$httpProvider", (provider) ->
+  provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
 ])

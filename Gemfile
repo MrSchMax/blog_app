@@ -12,9 +12,10 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'slim-rails'
 
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '3.2'
 gem 'rails-assets-angular'
 gem 'rails-assets-angular-route'
+gem 'underscore-rails'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
